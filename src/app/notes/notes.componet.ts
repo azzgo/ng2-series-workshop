@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 
-import { AppBar } from './share'
+import { AppBar, Card } from './share'
 
 
 @Component({
   selector: 'notes-container',
-  directives: [ AppBar ],
-  templateUrl: 'app/notes/notes.html'
+  directives: [ AppBar, Card ],
+  templateUrl: 'app/notes/notes.html',
+  styleUrls: [ 'app/notes/notes.css']
 })
-export class NotesComponent{}
+export class NotesComponent{
+  private notes = [
+    {title: "Card1", value: "Hello"},
+    {title: "Card2", value: "Word"}
+  ]
+}
