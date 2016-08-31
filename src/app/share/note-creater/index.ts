@@ -1,0 +1,1 @@
+export { NoteCreater } from './note-creater.component'
