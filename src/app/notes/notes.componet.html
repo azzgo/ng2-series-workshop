@@ -3,7 +3,9 @@
   <main class="main">
     <div class="row center-xs notes">
       <div class="col-xs-6 creator">
-        <note-creater></note-creater>
+        <note-creater
+          (createNote)="onAddNote($event)"
+        ></note-creater>
       </div>
       <div class="notes col-xs-8">
         <div class="row between-xs">

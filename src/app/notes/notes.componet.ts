@@ -19,4 +19,8 @@ export class NotesComponent{
   private onNoteChecked(index) {
     this.notes.splice(index, 1);
   }
+
+  private onAddNote(note) {
+    this.notes.push(note);
+  }
 }
