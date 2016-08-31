@@ -12,6 +12,11 @@ import { AppBar, Card } from './share'
 export class NotesComponent{
   private notes = [
     {title: "Card1", value: "Hello"},
-    {title: "Card2", value: "Word"}
+    {title: "Card2", value: "Word"},
+    {title: "Card3", value: "!!!"}
   ]
+
+  private onNoteChecked(index) {
+    this.notes.splice(index, 1);
+  }
 }
