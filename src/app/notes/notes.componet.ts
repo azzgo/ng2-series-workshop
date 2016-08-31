@@ -6,8 +6,8 @@ import { AppBar, NoteCard } from '../share'
 @Component({
   selector: 'notes-container',
   directives: [ AppBar, NoteCard ],
-  templateUrl: 'app/notes/notes.html',
-  styleUrls: [ 'app/notes/notes.css']
+  templateUrl: 'app/notes/notes.componet.html',
+  styleUrls: [ 'app/notes/notes.componet.css']
 })
 export class NotesComponent{
   private notes = [
