@@ -11,9 +11,9 @@ import { AppBar, NoteCard, NoteCreater} from '../share'
 })
 export class NotesComponent{
   private notes = [
-    {title: "Card1", value: "Hello"},
-    {title: "Card2", value: "Word"},
-    {title: "Card3", value: "!!!"}
+    {title: "Card1", value: "Hello", color: "lightsky"},
+    {title: "Card2", value: "Word", color: "white"},
+    {title: "Card3", value: "!!!", color: "purple"}
   ]
 
   private onNoteChecked(index) {

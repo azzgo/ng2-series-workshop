@@ -1,4 +1,7 @@
-<div class="note-creator shadow-2">
+<div 
+  class="note-creator shadow-2"
+  [ngStyle]="{'background-color': newNote.color}"  
+>
   <form class="row" 
     (submit)="onCreateNote()"
   >
@@ -8,6 +11,7 @@
       name="newNoteTitle"
       placeholder="Title"
       class="col-xs-10 title"
+      autocomplete="off"
       *ngIf="isFullForm"
     >
     <input
@@ -15,12 +19,14 @@
       [(ngModel)]="newNote.value"
       name="newNoteValue"
       placeholder="Take a note..."
+      autocomplete="off"
       class="col-xs-10"
       (focus)="isFullForm = true"
     >
     <div class="actions col-xs-12 row between-xs"
       *ngIf="isFullForm"
       >
+      <color-selector (getColor)="getColor($event)"></color-selector>
       <button
         type="submit"
         class="btn-light"
