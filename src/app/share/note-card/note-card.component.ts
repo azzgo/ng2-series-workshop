@@ -13,7 +13,6 @@ export class NoteCard {
   @Output()
   private checked = new EventEmitter()
 
-
   private onChecked() {
       this.checked.emit(null);
   }
