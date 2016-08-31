@@ -2,11 +2,11 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
-  selector: 'card',
-  templateUrl: 'app/notes/share/card/card.html',
-  styleUrls: [ 'app/notes/share/card/card.css']
+  selector: 'note-card',
+  templateUrl: 'app/share/note-card/note-card.component.html',
+  styleUrls: [ 'app/share/note-card/note-card.component.css']
 })
-export class Card {
+export class NoteCard {
   @Input()
   private note;
 

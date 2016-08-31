@@ -7,13 +7,13 @@
       </div>
       <div class="notes col-xs-8">
         <div class="row between-xs">
-          <card
+          <note-card
             *ngFor="let note of notes; let i = index"
             class="col-xs-4"
             [note]="note"
             (checked)="onNoteChecked(i)"
           >
-          </card>
+          </note-card>
         </div>
       </div>
     </div>

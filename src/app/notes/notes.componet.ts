@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { AppBar, Card } from './share'
+import { AppBar, NoteCard } from '../share'
 
 
 @Component({
   selector: 'notes-container',
-  directives: [ AppBar, Card ],
+  directives: [ AppBar, NoteCard ],
   templateUrl: 'app/notes/notes.html',
   styleUrls: [ 'app/notes/notes.css']
 })
