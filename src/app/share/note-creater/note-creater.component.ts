@@ -13,6 +13,8 @@ export class NoteCreater {
     value: "",
     color: "white"
   }
+  private isFullForm:boolean = false;
+
   @Output()
   private createNote = new EventEmitter();
 
