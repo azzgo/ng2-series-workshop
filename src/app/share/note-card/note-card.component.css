@@ -1,6 +1,7 @@
 .note-card {
   padding: 15px;
   border-radius: 2px;
+  margin: 10px 0;
   width: 100%;
   position: relative;
 }

@@ -14,6 +14,6 @@ export class NoteCard {
   private checked = new EventEmitter()
 
   private onChecked() {
-      this.checked.emit(null);
+      this.checked.emit(this.note);
   }
 }
