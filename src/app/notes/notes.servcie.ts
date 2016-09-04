@@ -14,6 +14,9 @@ export class NotesService {
   constructor(private http: Http) { }
 
   public get(): Observable<any> {
+    const token = window.localStorage.getItem('token');
+    this.headers.set("Authorization", `Bearer ${token}`);
+
     return this.http.get(`${this.api_url}/notes`, { headers: this.headers, body: ''})
       .map((response: Response) => {      
         if (!response.ok) {
@@ -25,6 +28,8 @@ export class NotesService {
   }
 
   public save(note): Observable<any> {
+    const token = window.localStorage.getItem('token');
+    this.headers.set("Authorization", `Bearer ${token}`);
     return this.http.post(`${this.api_url}/notes`, JSON.stringify(note), { headers: this.headers })
       .map((response: Response) => {
         if (!response.ok) {
@@ -36,6 +41,8 @@ export class NotesService {
   }
 
   public remove(note) {
+    const token = window.localStorage.getItem('token');
+    this.headers.set("Authorization", `Bearer ${token}`);
     return this.http.delete(`${this.api_url}/notes/${note.id}`, { headers: this.headers, body: '' })
       .map((response: Response) => {
         if (!response.ok) {

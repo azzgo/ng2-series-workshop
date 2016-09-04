@@ -1,1 +1,32 @@
-Auth here
+<div class="auth row center-xs middle-xs" (submit)="signin()">
+  <form class="col-xs-6 shadow-2">
+    <div class="inputs row center-xs middle-xs">
+      <h3 class="col-xs-8 title">
+        {{ mode }}
+      </h3>
+      <input
+        class="col-xs-8"
+        type="email"
+        name="email"
+        placeholder="email"
+        [(ngModel)]="user.email"
+      >
+      <div class="error">email is invalid</div>
+      <input
+        class="col-xs-8"
+        type="password"
+        name="password"
+        placeholder="password"
+        [(ngModel)]="user.password"
+      >
+      <div class="error">password is required</div>
+      <div class="actions col-xs-12">
+        <div class="row center-xs">
+          <button type="submit" class="btn-light">{{ mode }}</button>
+        </div>
+        <input name="mode" type="radio" value="signin" [(ngModel)]="mode" />Signin
+        <input name="mode" type="radio" value="signup" [(ngModel)]="mode" />Signup  
+      </div>
+    </div>
+  </form>
+</div>

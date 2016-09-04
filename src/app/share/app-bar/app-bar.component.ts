@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core'
 
 @Component({
@@ -6,5 +7,11 @@ import { Component } from '@angular/core'
   styleUrls: [ 'app/share/app-bar/app-bar.component.css']
 })
 
-export class AppBar {}
+export class AppBar {
+  constructor(private router: Router){}
+  private signout() {
+    window.localStorage.removeItem('token');
+    this.router.navigate(["auth"]);
+  }
+}
 
