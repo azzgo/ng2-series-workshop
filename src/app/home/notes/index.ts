@@ -29,4 +29,8 @@ export class Notes {
   checkCard(note, i) {
     this.notes.splice(i, 1)
   }
+
+  newNote(note) {
+    this.notes.push(note);
+  }
 }
