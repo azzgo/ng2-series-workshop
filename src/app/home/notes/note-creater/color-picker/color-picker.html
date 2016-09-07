@@ -1,0 +1,11 @@
+<div class="color-selector">
+  <img src="color-lens.svg" (click)="isPickerActive=true" />
+  <div class="selector row center-xs" *ngIf="isPickerActive">
+    <div 
+      *ngFor="let color of colors" 
+      [ngStyle]="{'background-color': color}"
+      (click)="selectColor(color)"
+      class="color">
+    </div>
+  </div>
+</div>

@@ -13,16 +13,20 @@ export class Notes {
   notes = [
     {
       title: 'n',
-      value: 'v'
+      value: 'v',
+      color: 'lightblue'
     }, {
       title: 'n1',
-      value: 'v1'
+      value: 'v1',
+      color: 'blue'
     }, {
       title: 'n1',
-      value: 'v1'
+      value: 'v1',
+      color: 'white'
     }, {
       title: 'n1',
-      value: 'v1'
+      value: 'v1',
+      color: 'red'
     }
   ]
 
