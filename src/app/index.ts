@@ -1,10 +1,12 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router';
 
-import {Home} from "./home"
 
 @Component({
   selector: 'app',
   template: require('./app.html'),
-  directives: [Home]
+  directives: [ ...ROUTER_DIRECTIVES ]
 })
 export class App{}
+
+export { routes } from './routers.ts'

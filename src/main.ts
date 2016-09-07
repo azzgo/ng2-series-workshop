@@ -1,5 +1,7 @@
-import {bootstrap} from '@angular/platform-browser-dynamic'
+import { bootstrap } from '@angular/platform-browser-dynamic'
 import { disableDeprecatedForms, provideForms } from '@angular/forms'
-import {App} from './app'
+import { provideRouter } from '@angular/router';
 
-bootstrap(App, [ disableDeprecatedForms(), provideForms() ])
+import { App, routes } from './app'
+
+bootstrap(App, [ disableDeprecatedForms(), provideForms(), provideRouter(routes) ])
