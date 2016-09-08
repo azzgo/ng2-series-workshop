@@ -9,4 +9,4 @@ import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router';
 })
 export class App{}
 
-export { routes } from './routers.ts'
+export { routes } from './routes'
